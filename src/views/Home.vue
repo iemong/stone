@@ -42,15 +42,29 @@ export default {
 
 <style lang="scss">
 .home {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100vh;
+  background-image: url("./../assets/mori.jpg");
+  background-size: contain;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
 }
 
 .number {
-    font-size: 64px;
+  font-size: 120px;
+  color: white;
 }
 </style>
